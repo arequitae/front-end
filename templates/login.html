@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<head xmlns:th="http://www.w3.org/1999/xhtml" >
+	<title>ANKH安全计算平台登录页面</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="robots" content="all,follow">
+	<!-- Bootstrap CSS-->
+	<link rel="stylesheet" href="/css/bootstrap/css/bootstrap.min.css">
+	<!-- Font Awesome CSS-->
+	<link rel="stylesheet" href="/css/font-awesome/css/font-awesome.min.css">
+	<!-- Custom stylesheet - for your changes-->
+	<link rel="stylesheet" href="/css/custom.css">
+	<!-- Favicon-->
+	<link rel="shortcut icon" href="/img/favicon.ico">
+	<!-- Tweaks for older IEs--><!--[if lt IE 9]>
+	    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+	    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+	
+	<link rel="stylesheet" href="/css/font-awesome.min.css"type="text/css">
+	<link rel="stylesheet" href="/css/bootstrap.min.css"  type="text/css">
+	<link rel="stylesheet" href="/css/bootstrap-theme.min.css" type="text/css">
+	<link rel="stylesheet" href="/css/templatemo_style.css" type="text/css">
+</head>
+<body class="templatemo-bg-gray">
+	<header class="header">
+	  <nav class="navbar navbar-expand-lg navbar-fixed-top ">
+		  <div class="navbar-brand">
+		  <img src="/img/favicon.ico" alt="Logo" > ANKH安全计算平台</a>
+		  </div>
+		  
+		    <ul class="navbar-nav ml-auto align-items-start align-items-lg-center"> <!---->
+		      <li class="nav-item"><a href="/" class="nav-link link-scroll">返回主页</a></li>
+		    </ul>
+		 
+
+	  </header>
+
+
+	<div class="container">
+		<div class="col-md-12">
+			<h1 class="margin-bottom-15">ANKH安全计算平台登录</h1>
+			<form class="form-horizontal templatemo-container templatemo-login-form-1 margin-bottom-30" role="form" action="/login" method="post">
+				<font color="#FF0000"th:if="${param.error}" th:text="用户名或密码错误"></font>
+		        <div class="form-group">
+		          <div class="col-xs-12">		            
+		            <div class="control-wrapper">
+		            	<label for="username" class="control-label fa-label"><i class="fa fa-user fa-medium"></i></label>
+		            	<input type="email" class="form-control" id="username" name="username" placeholder="请输入账户" required/>
+		            </div>		            	            
+		          </div>              
+		        </div>
+		        <div class="form-group">
+		          <div class="col-md-12">
+		          	<div class="control-wrapper">
+		            	<label for="password" class="control-label fa-label"><i class="fa fa-lock fa-medium"></i></label>
+		            	<input type="password" class="form-control" id="password" name="password" placeholder="请输入密码"required/>
+		            </div>
+		          </div>
+		        </div>
+		        <div class="form-group">
+		          <div class="col-md-12">
+	             	<div class="checkbox control-wrapper">
+	                	<label>
+	                  		<input type="checkbox" name="remember-me"> 自动登录
+                		</label>
+	              	</div>
+		          </div>
+		        </div>
+
+
+				<div class="form-group">
+		          <div class="col-md-12" ><!--style="text-align: center;"-->
+		          	<div class="control-wrapper" >
+						<input type="submit" value="登 录" class="btn btn-info" >
+		          		<a href="/forgotpassword" class="text-right pull-right">忘记密码?</a>
+		          	</div>
+		          </div>
+		        </div>
+		        <hr>
+		        <div class="form-group">
+		        	<div class="col-md-12">
+						
+		        		<label for="identity">选择登录身份: </label>
+						    <label class="radio-inline">
+						        <input type="radio" name="optionsRadiosinline" id="optionsRadios1" value="option1">贷款用户
+						    </label>
+						    <label class="radio-inline">
+						        <input type="radio" name="optionsRadiosinline" id="optionsRadios2"  value="option2">企业用户
+						    </label>
+							<label class="radio-inline">
+							    <input type="radio" name="optionsRadiosinline" id="optionsRadios3"  value="option3">政府管理员
+							</label>
+							<label class="radio-inline">
+							    <input type="radio" name="optionsRadiosinline" id="optionsRadios4"  value="option4">平台管理员
+							</label>
+		        	</div>
+		        </div>
+		      </form>
+		      <div class="text-center">
+		      	<a href="/register/user" class="templatemo-create-new">贷款用户注册<i class="fa fa-arrow-circle-o-right"></i></a>
+				
+				<a href="/register/bank" class="templatemo-create-new">&emsp;&emsp;企业用户注册 <i class="fa fa-arrow-circle-o-right"></i></a>
+		      </div>
+		</div>
+	</div>
+</body>
+</html>
